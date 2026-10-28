@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Catalog</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Video Game Catalog</h1>
+
+    <main class="game-list">
+        <% if(locals.games) {%>
+            <% games.forEach((game) => { %>
+                <article class="game-card">
+                    <img
+                        src="<%= game.imageUrl || 'https://placehold.co/300x400?text=No+Image' %>"
+                        alt="<%= game.title %>"
+                    >
+
+                    <h2><%= game.title %></h2>
+                    <p>Publisher: <%= game.publisher || "Unknown" %></p>
+                    <p>Release year: <%= game.releaseYear ?? "Unknown" %></p>
+                    <p>Age rating: <%= game.ageRating || "Not rated" %></p>
+                    <p class="price">
+                        $<%= Number(game.price).toFixed(2) %>
+                    </p>
+                </article>
+            <% }); %>
+        <% } %
+    </main>
+</body>
+</html>

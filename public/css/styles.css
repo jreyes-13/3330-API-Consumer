@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 24px;
+    background: #f4f6f9;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
+}
+
+.game-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.game-card h2 {
+    font-size: 1.15rem;
+}
+
+.game-card p {
+    line-height: 1.5;
+}
+
+.game-card .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #147d45;
+}
